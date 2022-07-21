@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #d1, #d2{
+            width:150px;
+            height:50px;
+            background-color:#0026ff;
+            border:2px solid;
+        }
+
+        #d2{
+            height:200px;
+            /*visibility:hidden;*/
+        }
+
+        .changeColor{
+            color:white;
+        }
+
+        .button{
+            width:150px;
+            height:50px;
+            background-color:#ff0000;
+            color:white;
+            border:1px solid;
+            cursor:pointer;
+        }
+
+    </style>
+    <!--Using CDN-->    
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.js"></script>-->
+    <script src="Content/JS/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div id="d1">
+        Click Here
+    </div>
+    <div id="d2">
+        Element Selector
+        p
+        div
+        b
+        input
+
+        Class Selector
+        .redColor
+        .
+    </div>
+
+    <p>
+        <button>Sign In</button>
+    </p>
+    
+    <script>
+        $(document).ready(function () {
+
+            //alert("Hello World!!!");
+
+            //$('#d1').click(function () {
+            //    $(this).hide();
+            //});
+
+            //$("#d1").click(function () {
+            //    //$("#d2").slideToggle();
+            //    $("#d2").fadeOut(3000);
+            //});
+
+            //$("#d1").dblclick(function () {
+            //    $("#d2").fadeIn(3000);
+            //})
+
+            //$("#d1").click(function () {
+            //   // $("#d2").animate({"color":"white"});
+            //    $("#d2").addClass("changeColor");
+            //});
+
+
+            //$("button").mouseover(function () {
+            //    $(this).addClass("button");
+            //});
+        });      
+    </script>
+</body>
+</html>

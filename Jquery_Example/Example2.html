@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Validation</title>
+    <style>
+        table {
+            border: 1px solid;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+
+    <script src="Content/JS/jquery-3.6.0.min.js"></script>
+    <script src="Content/JS/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>-->
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label>Enter User Id</label>
+            </td>
+            <td>
+                <input type="text" id="txtUserId" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Enter Password</label>
+            </td>
+            <td>
+                <input type="password" id="txtPassword" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Enter Date of Birth</label>
+            </td>
+            <td>
+                <input type="text" id="txtDOB" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="btnSignIn">Sign In</button>
+            </td>
+        </tr>
+    </table>
+
+    <!--JQuery-->
+    <script>
+        $(document).ready(function () {
+            $("#btnSignIn").click(function () {
+                $("input").each(function () {
+                    if ($(this).val() == '') {
+                        $(this).css({ "border": "2px solid red" });
+                    }
+                });
+            });
+
+            $("input").blur(function () {
+                if ($(this).val() != '') {
+                    $(this).css({ "border": "" });
+                }
+            });
+
+            //Implementing Date Picker
+            $("#txtDOB").datepicker({
+                minDate: 0, maxDate: "+2M +10D",
+                changeYear: true,
+                changeMonth: true
+            });
+        });
+    </script>
+</body>
+</html>
